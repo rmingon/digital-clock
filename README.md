@@ -7,6 +7,7 @@
 
 ## TODO 
 - [ ] add connector for multiple pcb
+- [ ] add capacitor
 - [ ] add more light ??
 - [ ] ESP8266 ?
 
