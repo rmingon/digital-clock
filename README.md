@@ -2,6 +2,9 @@
 
 ## Just a digital clock with atmega328p + ws2812b + RTC
 
+## How to program
+### For use this clock you will need to program the mcu via ICSP. (USBASP for example)
+
 ## TODO 
 - [ ] add connector for multiple pcb
 - [ ] add more light ??
