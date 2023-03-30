@@ -8,6 +8,7 @@
 ## TODO 
 - [ ] add connector for multiple pcb
 - [ ] add more light ??
+- [ ] ESP8266 ?
 
 ### Schematic
 
