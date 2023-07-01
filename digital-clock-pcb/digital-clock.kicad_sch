@@ -2450,7 +2450,7 @@
     (property "Value" "ATmega328P-M" (id 1) (at 37.5794 139.7 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm" (id 2) (at 35.56 99.06 0)
+    (property "Footprint" "Package_QFP:TQFP-32_7x7mm_P0.8mm" (id 2) (at 35.56 99.06 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" (id 3) (at 35.56 99.06 0)
@@ -2598,7 +2598,7 @@
       (reference "R2") (unit 1) (value "R_Small") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/ebd1509e-daba-42cf-8f1c-294b259f2169"
-      (reference "U1") (unit 1) (value "ATmega328P-M") (footprint "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm")
+      (reference "U1") (unit 1) (value "ATmega328P-M") (footprint "Package_QFP:TQFP-32_7x7mm_P0.8mm")
     )
     (path "/d7af507e-f887-4995-925b-7c5f77d83df7"
       (reference "U2") (unit 1) (value "PCF8523T") (footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
