@@ -2,6 +2,10 @@
 
 ## Just a digital clock with atmega328p + ws2812b + RTC
 
+# ONE DIGIT -> [VIDEO](https://www.youtube.com/shorts/d32lipOYpTA)
+
+# CHAINED DIGITS -> [VIDEO](https://www.youtube.com/shorts/P1QIr2BeblI)
+
 ## How to program
 ### For use this clock you will need to program the mcu via ICSP. (USBASP for example)
 
