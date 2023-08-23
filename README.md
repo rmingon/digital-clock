@@ -6,6 +6,8 @@
 
 # CHAINED DIGITS -> [VIDEO](https://www.youtube.com/shorts/P1QIr2BeblI)
 
+# CLOCK ON WALL -> [VIDEO](https://www.youtube.com/shorts/ad-uJUUdQWM)
+
 ## How to program
 ### For use this clock you will need to program the mcu via ICSP. (USBASP for example)
 
