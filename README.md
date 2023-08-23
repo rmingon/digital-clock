@@ -2,6 +2,10 @@
 
 ## Just a digital clock with atmega328p + ws2812b + RTC
 
+# FINISH
+
+![Schematic](https://github.com/rmingon/digital-clock/blob/main/finish.jpg?raw=true)
+
 # ONE DIGIT -> [VIDEO](https://www.youtube.com/shorts/d32lipOYpTA)
 
 # CHAINED DIGITS -> [VIDEO](https://www.youtube.com/shorts/P1QIr2BeblI)
@@ -12,7 +16,7 @@
 ### For use this clock you will need to program the mcu via ICSP. (USBASP for example)
 
 ## TODO 
-- [ ] add connector for multiple pcb
+- [x] add connector for multiple pcb
 - [ ] add capacitor
 - [ ] add more light ??
 - [ ] ESP8266 ?
