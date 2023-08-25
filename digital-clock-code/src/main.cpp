@@ -36,7 +36,7 @@ int minute = 0;
 const uint16_t PixelCount = LED_BY_SEGMENT * SEGMENT * DIGIT; // this example assumes 4 pixels, making it smaller will cause a failure
 const uint8_t PixelPin = 9;  // make sure to set this to the correct pin, ignored for Esp8266
 
-#define colorSaturation 30
+int colorSaturation = 30;
 
 MCP7940_Class MCP7940;
 
@@ -55,6 +55,7 @@ HslColor hslBlue(blue);
 HslColor hslWhite(white);
 HslColor hslBlack(black);
 
+RgbColor randomColor();
 int* getNumberFromInt(int);
 int getSegment(int);
 void setDigit(int *, int, int);
@@ -106,12 +107,19 @@ void loop()
   }
   
   if (now.hour() != hour) {
+    if (now.hour() > 22 || now.hour() < 7) {
+      colorSaturation = 20;
+    } else {
+      colorSaturation = 50;
+    }
     unsigned first_hour = (now.hour() / 10U) % 10;
     unsigned second_hour = (now.hour() / 1U) % 10;
     setDigit(getNumberFromInt(first_hour), getSegment(first_hour), 1);
     setDigit(getNumberFromInt(second_hour), getSegment(second_hour), 2);
     hour = now.hour();
   }
+
+
 
   if (digitalRead(MINUTE_PIN) == HIGH) {
     MCP7940.adjust(DateTime(now.year(), now.month(), now.day(), now.hour(), now.minute() + 1, now.second()));
@@ -125,14 +133,17 @@ void loop()
 }
 
 void setDigit(int *digit, int segment, int position) {
-  RgbColor color(colorSaturation, 0, 0);
   resetDigit(position);
   for(int i = 0; i < segment; i++) {
-    strip.SetPixelColor((digit[i]*3)+(LED_BY_SEGMENT * SEGMENT * (position - 1)), color);
-    strip.SetPixelColor((digit[i]*3+1)+(LED_BY_SEGMENT * SEGMENT * (position - 1)), color);
-    strip.SetPixelColor((digit[i]*3+2)+(LED_BY_SEGMENT * SEGMENT * (position - 1)), color);
+    strip.SetPixelColor((digit[i]*3)+(LED_BY_SEGMENT * SEGMENT * (position - 1)), randomColor());
+    strip.SetPixelColor((digit[i]*3+1)+(LED_BY_SEGMENT * SEGMENT * (position - 1)), randomColor());
+    strip.SetPixelColor((digit[i]*3+2)+(LED_BY_SEGMENT * SEGMENT * (position - 1)), randomColor());
   }
   strip.Show();
+}
+
+RgbColor randomColor() {
+  return RgbColor (random(30, 150), random(30, 150), random(30, 150));
 }
 
 int* getNumberFromInt(int number) {
